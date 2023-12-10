@@ -73,6 +73,7 @@ nav {
 
 main {
     margin-bottom: 84px;
+    color: red;
 }
 
 footer {
@@ -297,9 +298,6 @@ i[class*="van-type-"] {
 .van-detail-container .back-button {
     color: black;
     text-decoration: none;
-}
-
-.van-detail-container .back-button:visited {
 }
 
 .van-detail-container .back-button span {
