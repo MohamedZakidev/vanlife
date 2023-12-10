@@ -17,6 +17,8 @@ a {
 
 body::-webkit-scrollbar {
     display: none;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 body {
@@ -73,8 +75,6 @@ nav {
 
 main {
     margin-bottom: 84px;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 footer {
