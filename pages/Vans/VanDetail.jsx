@@ -1,15 +1,14 @@
 import React from "react"
 import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
-import { getVans } from "../../api"
+import { getVan } from "../../api"
 
 export function loader({ params }) {
-    return getVans(params.id)
+    return getVan(params.id)
 }
 
 export default function VanDetail() {
     const location = useLocation()
     const van = useLoaderData()
-
     const search = location.state?.search || "";
     const type = location.state?.type || "all";
 
