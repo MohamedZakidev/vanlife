@@ -57,10 +57,9 @@ export async function getHostVans() {
         ...doc.data(),
         id: doc.id
     }))
-    
+
     return vans
 }
-
 
 export async function loginUser(creds) {
     const res = await fetch("/api/login",
