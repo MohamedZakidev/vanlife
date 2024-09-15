@@ -18,12 +18,12 @@ export async function action({ request }) {
     const password = formData.get("password")
     const pathname = new URL(request.url)
         .searchParams.get("redirectTo") || "/host"
-    
+
     try {
         const data = await loginUser({ email, password })
         localStorage.setItem("loggedin", true)
         return redirect(pathname)
-    } catch(err) {
+    } catch (err) {
         return err.message
     }
 }
@@ -39,9 +39,9 @@ export default function Login() {
             {message && <h3 className="red">{message}</h3>}
             {errorMessage && <h3 className="red">{errorMessage}</h3>}
 
-            <Form 
-                method="post" 
-                className="login-form" 
+            <Form
+                method="post"
+                className="login-form"
                 replace
             >
                 <input
