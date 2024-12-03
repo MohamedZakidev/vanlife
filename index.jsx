@@ -1,32 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Link
-} from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Vans, { loader as vansLoader } from "./pages/Vans/Vans"
-import VanDetail, { loader as vanDetailLoader } from "./pages/Vans/VanDetail"
-import Dashboard, { loader as dashboardLoader } from "./pages/Host/Dashboard"
-import Income from "./pages/Host/Income"
-import Reviews from "./pages/Host/Reviews"
-import HostVans, { loader as hostVansLoader } from "./pages/Host/HostVans"
-import HostVanDetail, { loader as hostVanDetailLoader } from "./pages/Host/HostVanDetail"
-import HostVanInfo from "./pages/Host/HostVanInfo"
-import HostVanPricing from "./pages/Host/HostVanPricing"
-import HostVanPhotos from "./pages/Host/HostVanPhotos"
-import NotFound from "./pages/NotFound"
-import Login, { loader as loginLoader, action as loginAction } from "./pages/Login"
-import Layout from "./components/Layout"
-import HostLayout from "./components/HostLayout"
-import Error from "./components/Error"
-import { requireAuth } from "./utils"
+  RouterProvider
+} from "react-router-dom";
+import Error from "./components/Error";
+import HostLayout from "./components/HostLayout";
+import Layout from "./components/Layout";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Dashboard, { loader as dashboardLoader } from "./pages/Host/Dashboard";
+import HostVanDetail, { loader as hostVanDetailLoader } from "./pages/Host/HostVanDetail";
+import HostVanInfo from "./pages/Host/HostVanInfo";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
+import HostVanPricing from "./pages/Host/HostVanPricing";
+import HostVans, { loader as hostVansLoader } from "./pages/Host/HostVans";
+import Income from "./pages/Host/Income";
+import Reviews from "./pages/Host/Reviews";
+import Login, { action as loginAction, loader as loginLoader } from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import VanDetail, { loader as vanDetailLoader } from "./pages/Vans/VanDetail";
+import Vans, { loader as vansLoader } from "./pages/Vans/Vans";
+import { requireAuth } from "./utils";
 
-import "./server"
+import "./server";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>
